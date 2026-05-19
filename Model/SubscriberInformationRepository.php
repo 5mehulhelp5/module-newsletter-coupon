@@ -29,7 +29,7 @@ class SubscriberInformationRepository implements SubscriberInformationRepository
         protected SubscriberInformationCollectionFactory $subscriberInformationCollectionFactory,
         protected SubscriberInformationResource $subscriberInformationResource,
         protected CustomerRepositoryInterface $customerRepository,
-        protected array $marketingEmailIntegrations = []
+        protected ?array $marketingEmailIntegrations = []
     )
     {
     }

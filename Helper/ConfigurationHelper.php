@@ -66,7 +66,7 @@ class ConfigurationHelper
      * @param string $scope
      * @return bool
      */
-    public function isCouponGenerationAvailable($store = null, string $scope = ScopeInterface::SCOPE_STORE): bool
+    public function isCouponGenerationAvailable(mixed $store = null, string $scope = ScopeInterface::SCOPE_STORE): bool
     {
         return $this->getUsedSalesRuleId($store, $scope) && $this->isCouponGenerationEnabled($store, $scope);
     }
@@ -76,7 +76,7 @@ class ConfigurationHelper
      * @param string $scope
      * @return bool
      */
-    public function isCouponGenerationEnabled($store = null, string $scope = ScopeInterface::SCOPE_STORE): bool
+    public function isCouponGenerationEnabled(mixed $store = null, string $scope = ScopeInterface::SCOPE_STORE): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::PATH_COUPON_GENERATION_ENABLED,
@@ -90,7 +90,7 @@ class ConfigurationHelper
      * @param string $scope
      * @return mixed
      */
-    public function getUsedSalesRuleId($store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
+    public function getUsedSalesRuleId(mixed $store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
     {
         return $this->scopeConfig->getValue(
             self::PATH_USED_SALESRULE_ID,
@@ -104,7 +104,7 @@ class ConfigurationHelper
      * @param string $scope
      * @return mixed
      */
-    public function getDelayExpression($store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
+    public function getDelayExpression(mixed $store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
     {
         return $this->scopeConfig->getValue(
             self::PATH_COUPON_EXPIRATION_DELAY_EXPRESSION,
@@ -118,7 +118,7 @@ class ConfigurationHelper
      * @param string $scope
      * @return mixed
      */
-    public function disableConfirmationRequestEmail($store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
+    public function disableConfirmationRequestEmail(mixed $store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
     {
         return $this->scopeConfig->isSetFlag(
             self::PATH_DISABLE_NEWSLETTER_CONFIRMATION_REQUEST_EMAIL,
@@ -132,7 +132,7 @@ class ConfigurationHelper
      * @param string $scope
      * @return mixed
      */
-    public function disableConfirmationSuccessEmail($store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
+    public function disableConfirmationSuccessEmail(mixed $store = null, string $scope = ScopeInterface::SCOPE_STORE): mixed
     {
         return $this->scopeConfig->isSetFlag(
             self::PATH_DISABLE_NEWSLETTER_CONFIRMATION_SUCCESS_EMAIL,
@@ -146,7 +146,7 @@ class ConfigurationHelper
      * @param string $scope
      * @return bool
      */
-    public function disableUnsubscriptionEmail($store = null, string $scope = ScopeInterface::SCOPE_STORE): bool
+    public function disableUnsubscriptionEmail(mixed $store = null, string $scope = ScopeInterface::SCOPE_STORE): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::PATH_DISABLE_NEWSLETTER_UNSUBSCRIPTION_EMAIL,

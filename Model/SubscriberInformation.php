@@ -48,9 +48,9 @@ class SubscriberInformation extends AbstractModel implements SubscriberInformati
         protected SubscriberFactory $subscriberFactory,
         Context $context,
         Registry $registry,
-        SubscriberInformationResource $resource = null,
-        SubscriberInformationCollection $resourceCollection = null,
-        array $data = []
+        ?SubscriberInformationResource $resource = null,
+        ?SubscriberInformationCollection $resourceCollection = null,
+        ?array $data = []
     )
     {
         parent::__construct(
